@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-[#1a2a3a] font-['Inter',sans-serif];
+  }
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Montserrat', 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/30 shadow-xl rounded-2xl;
+  }
+  .nav-glow {
+    @apply bg-white/70 backdrop-blur-md border-b border-[#3282B8]/20 shadow-sm;
+  }
+  .btn-primary {
+    @apply bg-gradient-to-r from-[#002B5B] to-[#0a4c7a] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] hover:from-[#003667] hover:to-[#1e5a8a];
+  }
+  .btn-outline {
+    @apply border-2 border-[#3282B8] text-[#002B5B] px-5 py-2.5 rounded-xl font-semibold hover:bg-[#3282B8]/10 transition-all duration-200;
+  }
+}
